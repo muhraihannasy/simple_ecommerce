@@ -1,0 +1,36 @@
+ion-menu {
+    --width: 100%;
+}
+
+.main-list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-list {
+        width: 100%;
+
+        ion-item {
+            font-size: 1.2rem;
+        }
+
+        .selected {
+            border-left: 5px solid var(--ion-color-primary);
+            color: var(--ion-color-primary);
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 4%;
+        right: -1rem;
+        font-size: 2rem;
+        --ripple-color: transparent;
+    }
+}
+
+.header-md::after {
+    --background: none;
+}
+

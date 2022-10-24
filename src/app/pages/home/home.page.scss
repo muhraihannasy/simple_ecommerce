@@ -1,0 +1,162 @@
+ion-menu-button {
+  margin-left: 1rem;
+}
+
+.header-md::after {
+  background: none;
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+
+.funnel {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.notification {
+  font-size: 1rem;
+
+  span {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    width: 10px;
+    height: 10px;
+    background-color: #f5576c;
+    border-radius: 50%;
+  }
+}
+
+.search {
+  ion-item {
+    border-radius: 0.6rem;
+    box-shadow: 0px 12px 30px 0 rgba($color: #000000, $alpha: 0.1);
+    padding: 8px;
+  }
+
+  ion-icon {
+    margin-right: 1.5rem;
+  }
+
+  ion-input {
+    padding-left: 1rem !important;
+    border-left: 1px solid #f4f4f4;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.6rem;
+  margin-top: 0rem;
+
+  h2 {
+    margin-left: 1rem;
+    color: #434343;
+  }
+
+  p{
+    margin-right: 1rem;
+    color: #656565;
+  }
+}
+
+.category-slider{
+  ion-slide {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    // margin-bottom: 30px;
+
+
+      ion-col {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          background-color: #4e464655;
+          border-radius: 1rem;
+
+
+
+        h4 {
+          color: #fff;
+          margin: 0;
+          font-size: 1rem;
+          // background: rgba(11, 11, 11, 0.5);
+          // padding: 0.2rem 1rem;
+          // border-radius: 10px;
+        }
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0.6rem;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          box-shadow: 0px 10px 10px 0px rgba($color: #000000, $alpha: 0.2);
+        }
+
+      
+
+      }
+
+      
+   
+  }
+
+}
+
+.product-slider {
+  padding-bottom: 2rem;
+
+  ion-slide {
+    width: 220px;
+    height: 20rem;
+    margin-right: 1rem;
+
+    ion-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      width: 100%;
+      height: 100%;
+      padding: 0 0.6rem !important;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-family: 'Poppins-semibold';
+        font-size: 1rem;
+      }
+
+      .star {
+        display: flex;
+        gap: 0.4rem;
+        color: #ffa601;
+      }
+    }
+  }
+}
+
+.font-bold {
+  font-family: "Poppins-medium"
+}

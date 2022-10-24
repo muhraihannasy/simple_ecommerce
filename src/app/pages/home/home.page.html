@@ -1,0 +1,70 @@
+<ion-header [translucent]="true" > 
+  <ion-toolbar>
+   <ion-buttons>
+    <ion-menu-button>
+      <ion-icon name="apps"></ion-icon>
+    </ion-menu-button>
+   </ion-buttons> 
+   <ion-buttons slot="end">
+    <ion-button class="notification">
+     <ion-icon name="notifications-outline">
+     </ion-icon>
+      <span>&nbsp;</span>
+    </ion-button>
+    <ion-button class="funnel">
+      <ion-icon name="funnel-outline"></ion-icon>
+    </ion-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your Product"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="title ion-padding">
+    <h2>Categories</h2>
+    <p>See all</p>
+  </div>
+
+  <div class="category-slider ion-padding-start">
+    <ion-slides [options]="{slidesPerView: 'auto',zoom: 'false', gradCursor: true }">
+      <ion-slide *ngFor="let category of categories">
+        <ion-col>
+          <h4>{{ category.name }}</h4>
+          <img [src]="category.image" alt="">
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="title ion-padding">
+    <h2 class="font-bold">Featured</h2>
+    <p>See all</p>
+  </div>
+
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{slidesPerView: 'auto',zoom: 'false', gradCursor: true}">
+      <ion-slide *ngFor="let product of products" routerLink="/detail-product/{{ product.id }}">
+        <ion-col>
+          <img [src]="product.image" alt="">
+         <div>
+          <h4>{{ product.name.slice(0, 20) }}...</h4>
+           <h3>{{ product.price | currency:"Rp. " }}</h3>
+            <div class="star">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+         </div>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

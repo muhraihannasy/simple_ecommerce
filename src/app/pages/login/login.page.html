@@ -1,0 +1,34 @@
+<ion-header class="ion-padding">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button class="backBtn" routerLink="/welcome" routerDirection="back">
+                <ion-icon name="arrow-back-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="container ion-padding">
+    <div class="ion-padding container">
+        <h1>Login</h1>
+        
+        <div class="form-container">
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" >Password</ion-label>
+                <ion-input type="password"></ion-input>
+                <ion-icon name="eye" slot="end"></ion-icon>
+            </ion-item>
+        </div>
+
+        <ion-button expand="block" class="main-button" (click)="login()">Log in</ion-button>
+
+        <div class="signup">
+            Don't have an account? 
+            <ion-button fill="clear" routerLink="/register" color="dark">Sig nup</ion-button>
+        </div>
+    </div>
+</ion-content>

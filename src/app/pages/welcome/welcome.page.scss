@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    ion-img{ 
+        width: 85%;
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+
+    .button-container{ 
+        width: 80%;
+        margin: 0 auto;
+    }
+}

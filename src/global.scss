@@ -24,3 +24,70 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-bold';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./assets/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-semibold';
+    font-weight: 600;
+    font-style: normal;
+    src: url('./assets/fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-medium';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./assets/fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+* {
+    font-family: 'Poppins';
+}
+
+.main-button {
+    --background: linear-gradient(90deg, rgba(102, 126, 234, 1) 0%,  rgba(100, 182, 255, 1) 100%);
+    --box-shadow: none;
+    --border-radius: 0.6rem;
+    position: relative;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.main-button::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    top: 2px;
+    height: 43px;
+    box-shadow: 0px 20px 20px -12px rgba(100, 182, 255, 1);
+    z-index: -1;
+}
+
+ion-button:focus {
+    outline: none !important;
+}
+
+ion-buttons:focus {
+    outline: none !important;
+}

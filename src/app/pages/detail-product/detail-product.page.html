@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>    
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container ion-padding">
+   <div class="img-area">
+      <img [src]="product?.image" alt="">
+   </div>
+   <div class="detail">
+      <div class="star">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+        </div>
+      <h4>{{ product?.name }}</h4>
+      <h3 class="price">{{ product?.price | currency:'Rp. ' }}</h3>
+
+      <h5>Description</h5>
+      <p>
+        {{ product?.description }}
+      </p>
+   </div>
+
+   <ion-button expand="block" class="main-button" (click)="addToCart(product?.id)">Masuk Keranjang</ion-button>
+</ion-content>
